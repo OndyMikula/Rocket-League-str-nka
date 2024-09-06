@@ -1,0 +1,197 @@
+/* Zakladni formatovaci pravidla pro cely dokument */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url('bgc.jpg') no-repeat center center fixed;
+	background-size: cover;
+	font-family: "Calibri","sans-serif";
+	color: black;
+	padding-top: 90px;
+	min-height: 100vh; 
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	height: 90px; /*2*/
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.background {
+	background: url('bgc.jpg') no-repeat center center fixed;
+	background-size: cover;
+	flex: 1;
+}
+
+
+/*Fomratovani obsahu stranky*/
+
+
+header > nav {
+	font-size: medium; /*4*/
+	background-color: #1584FC; /*4*/
+	border-top: 1px; /*4*/
+	border-bottom: 1px solid #00AAFF; /*4*/
+	border-top: 1px solid #00AAFF; /*4*/
+	padding-left: 5%; /*4*/
+	padding-right: 5%; /*15*/
+	margin-bottom: 5px; /*15*/
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60%;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+h1 {
+	font-size: xx-large; /*9*/
+	margin: 1%;
+	color: white;
+	text-align: center;
+}
+h2 {
+	font-size: xx-large; /*9*/
+	margin: 1%; /*9*/
+	color: white; /*9*/
+	text-align: center;
+}
+h3 {
+	font-size: x-large;
+	margin: 1%;
+	color: white;
+	text-align: center;
+}
+h4 {
+	font-size: larger;
+	margin: 1%;
+	color: white;
+	text-align: center;
+}
+p{
+	font-size: large;
+	margin: 1%;
+	color: white;
+	text-align: center;
+}
+a {
+	color: rgb(0, 174, 255);
+}
+li {
+	font-size: large;
+	margin: 1%;
+	color: white;
+	text-align: center;
+}
+
+#menu {
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	z-index: 100;
+}
+#menu a {
+	font-size:x-large;
+	display: inline-block; /*5*/
+	margin: 1%; /*5*/
+	text-decoration: none; /*5*/ 
+    color: white;
+}
+#menu a:hover {
+	background-color: #31AEFF;/*6*/
+	/*neco jeste neivm jak to funguje cau*/
+}
+
+.text {
+	display: flex;
+}
+.text div {
+	width: 50%;
+	margin: 2%;
+}
+.text div p {
+	text-align: center;
+}
+.text div img { /*centruje obrazek v divu*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.Formulář p {
+	text-align: center;
+	margin: 0%;
+}
+.Formulář input {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 20%;
+}
+.Formulář textarea {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+}
+
+.zapati {
+	height: 10vh;
+	width: 100%;
+	background-color: #202020;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	text-align: center;
+}
+
+/*Responzivita*/
+
+@media (max-width: 1200px) {
+	header nav a {
+		font-size: large;
+		margin: 0 10px;
+	}
+}
+
+@media (max-width: 992px) {
+	header nav a {
+		font-size: medium;
+		margin: 0 8px;
+	}
+}
+
+@media (max-width: 768px) {
+	header nav a {
+		display: block;
+		margin: 10px 0;
+	}
+	img {
+		width: 100%;
+	}
+	.Formulář input, .Formulář textarea {
+		width: 40%; /* Přizpůsobíme šířku pro mobilní zařízení */
+	}
+}
+
+@media (max-width: 576px) {
+	h1, h2, h3, h4, p, li {
+		font-size: medium;
+	}
+	#menu a {
+		font-size: medium;
+	}
+}
